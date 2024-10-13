@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
-        gameOverText.gameObject.SetActive(true);
     }
     
     IEnumerator SpawnTarget()
@@ -32,5 +31,10 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver ()
+    {
+        gameOverText.gameObject.SetActive(true);
     }
 }
