@@ -10,16 +10,18 @@ public class GameManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public bool isGameActive;
 
     void Start()
     {
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
+        isGameActive = true;
     }
     
     IEnumerator SpawnTarget()
     {
-        while (true)
+        while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, targets.Count);
@@ -36,5 +38,6 @@ public class GameManager : MonoBehaviour
     public void GameOver ()
     {
         gameOverText.gameObject.SetActive(true);
+        isGameActive = false;
     }
 }
