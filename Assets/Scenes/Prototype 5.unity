@@ -777,9 +777,9 @@ MonoBehaviour:
   - {fileID: 8370927619993525455, guid: c861caa6365641d438395ada47dc5690, type: 3}
   - {fileID: 475596636894375365, guid: 10cd219ab016c1c4390f01faed0086df, type: 3}
   scoreText: {fileID: 681370461}
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 236114705}
   isGameActive: 0
-  restartButton: {fileID: 0}
+  restartButton: {fileID: 925550462}
 --- !u!4 &952624715
 Transform:
   m_ObjectHideFlags: 0
