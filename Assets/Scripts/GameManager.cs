@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        isGameActive = true;
+        score = 0;
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
-        isGameActive = true;
     }
     
     IEnumerator SpawnTarget()
@@ -38,14 +39,14 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    public void GameOver ()
+    public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        isGameActive = false;
         restartButton.gameObject.SetActive(true);
+        isGameActive = false;
     }
 
-    public void RestartGame ()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
