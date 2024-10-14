@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
+    }
+    
+    public void Start()
+    {
         isGameActive = true;
         score = 0;
         StartCoroutine(SpawnTarget());
